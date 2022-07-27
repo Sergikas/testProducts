@@ -9,13 +9,15 @@ export default [
                 "https://media.gq.com.mx/photos/5dfd24640e681900084bea41/master/w_2143,h_3000,c_limit/ZAPATOS%203.jpg",
                 "https://gatopardo.com/wp-content/uploads/2016/12/zapatos-silver-deer-int.jpg",
                 "https://album.mediaset.es/eimg/2019/07/15/ZzhSdDsWcmjGGMSDMry0O5.jpg?w=1200"
-                ]
+                ],
+        storage:53
     },
     {
         id:2,
         name:"shoez",
         description:"",
         price:"340",
-        images:[]
+        images:[],
+        storage:53
     }
 ]

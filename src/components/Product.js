@@ -4,7 +4,7 @@ import {useState} from "react";
 export default function Product(props){
 
     const [focusImage,setFocusImage] = useState(props.data.images[0])
-
+    
     function handleFocusImage(image){
         setFocusImage(image);
     }
@@ -26,6 +26,10 @@ export default function Product(props){
                 <p className="product-name">{props.data.name}</p>
                 <p className="product-detail">{props.data.description}</p>
                 <h2 className="product-price">${props.data.price}</h2>
+                <div className="product-buttons">
+                        <button className="button-product-1 buttons"></button>
+                        <button className="button-product-2 buttons">Add to car</button>
+                </div>
             </div>
         </div>
     )
