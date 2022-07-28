@@ -42,7 +42,6 @@
 
 .buttons{
     height: 40px;
-    height: 40px;
     font-family: Inter;
     color: white;
     font-weight: 600;
@@ -52,6 +51,31 @@
 
 .button-product-1{
     width: 30%;  
+    position: relative;
+    color: black;
+    font-size: 1em;
+}
+
+.btn-controll{
+    position: absolute;
+    border-style: none;
+    border-radius: 5px;
+    top: 0;
+    width: 30px;
+}
+
+.btn-controll:hover{
+    opacity: .6;
+}
+
+.btn1{
+    left: 0;
+    height: 40px;
+}
+
+.btn2{
+    right: 0;
+    height: 40px;
 }
 
 .button-product-2{
