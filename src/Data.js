@@ -10,7 +10,7 @@ export default [
                 "https://gatopardo.com/wp-content/uploads/2016/12/zapatos-silver-deer-int.jpg",
                 "https://album.mediaset.es/eimg/2019/07/15/ZzhSdDsWcmjGGMSDMry0O5.jpg?w=1200"
                 ],
-        storage:53
+        storage:12
     },
     {
         id:2,

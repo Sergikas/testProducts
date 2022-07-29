@@ -1,0 +1,53 @@
+.header-container{
+    background-color: white;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    width: 900px;
+    height: 70px;
+    margin: 0 20%;
+    padding: 2% 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.header-cart{
+    margin-left: auto;
+    align-items: right;
+    position: relative;
+}
+
+.icon-cart, .card-items{
+    position: absolute;
+    right: 0;
+}
+
+.card-items{
+    top: 30px;
+    height: auto;
+    min-height: 150px;
+    width: 250px;
+    display: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 5px;
+    background-color: white;
+    z-index: 2;
+}
+
+.card-items > p{
+    margin: 5%;
+    font-family: Inter;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.card-empty{
+    color: grey;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+.icon{
+    height: 20px;
+}

@@ -1,4 +1,5 @@
 import Product from "./Product.js";
+import Header from "./Header.js";
 import "./App.css";
 import Data from "../Data.js";
 //import {useState, useEffect} from "react";
@@ -19,6 +20,7 @@ export default function App(){
 
     return(
         <div className="app-container">
+            <Header />
             <Product data={Data[0]} key={Data[0].name}/>
         </div>
     )

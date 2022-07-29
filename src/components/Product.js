@@ -2,7 +2,6 @@ import "./Product.css";
 import {useState} from "react";
 import minus from "../images/icons/icon-minus.svg";
 import plus from "../images/icons/icon-plus.svg";
-import cart from "../images/icons/icon-cart.svg";
 
 export default function Product(props){
 
