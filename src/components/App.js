@@ -1,8 +1,9 @@
 import Product from "./Product.js";
 import Header from "./Header.js";
+import CartItem from "./CartItem";
 import "./App.css";
 import Data from "../Data.js";
-//import {useState, useEffect} from "react";
+import {useState} from "react";
 
 export default function App(){
 
@@ -18,10 +19,28 @@ export default function App(){
         getData()
     },[]) */
 
+    const [itemsCart,setItemsCart] = useState([]); //cart items 
+
+    function addCart(id,amountProduct){
+        setItemsCart(prevItems =>{
+            return[...prevItems,<CartItem 
+                    data={Data[id-1]}
+                    amountProduct={amountProduct}
+                />]
+        })
+        
+    }
+
     return(
         <div className="app-container">
-            <Header />
-            <Product data={Data[0]} key={Data[0].name}/>
+            <Header 
+                itemsCart={itemsCart}
+            />
+            <Product 
+                data={Data[0]} 
+                key={Data[0].id}
+                addCart={addCart}
+            />
         </div>
     )
 }

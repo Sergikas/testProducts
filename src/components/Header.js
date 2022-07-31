@@ -3,11 +3,11 @@ import {useState} from "react";
 import Logo from "../images/icons/logo.svg";
 import cart from "../images/icons/icon-cart.svg";
 
-export default function Header(){
+export default function Header(props){
 
-    const [itemsVisibility,setItemsVisibility] = useState(false);
-    const [itemsAddedCart,setItemsAddedCart] = useState([]);
-
+    //cart items visibility
+    const [itemsVisibility,setItemsVisibility] = useState(false); 
+    
     function handdleCartItems(listVisibility){
         listVisibility ? 
         document.getElementById("card-items").style.display = "none" :
@@ -15,6 +15,7 @@ export default function Header(){
 
         setItemsVisibility(prevVisibility => !prevVisibility);
     }
+    //--
 
     return(
         <div className="header-container">
@@ -26,7 +27,14 @@ export default function Header(){
                     alt="" />
                 <div id="card-items" className="card-items">
                     <p>Cart</p>
-                    {itemsAddedCart.length > 0 ? <p>Items avalibles</p> : <p className="card-empty">Your cart is empty.</p>}
+
+                    {props.itemsCart.length > 0 ? 
+                    <div className="searchItems"> 
+                        {props.itemsCart}
+                        <button className="buttons buttonCart">Checkout</button>
+                    </div>: 
+
+                    <p className="card-empty">Your cart is empty.</p>}
                 </div>
             </div>
         </div>

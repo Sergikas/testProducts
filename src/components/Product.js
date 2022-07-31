@@ -6,17 +6,17 @@ import plus from "../images/icons/icon-plus.svg";
 export default function Product(props){
 
     const [focusImage,setFocusImage] = useState(props.data.images[0]);
-    const [amountProduct,setAmountProduct] = useState(0);
+    const [amountProduct,setAmountProduct] = useState(1);
 
     // Display the corrent amount of avalible products (no more than storage either minus of 0)
     function handleAmountProducts(operation){
         operation==="minus" ? 
 
         setAmountProduct(prevState => {
-            if(prevState-1 >= 0){
+            if(prevState-1 > 0){
                 return prevState - 1;
             }else{
-                return 0;
+                return 1;
             }}
         ) : 
         setAmountProduct(prevState =>{
@@ -60,7 +60,7 @@ export default function Product(props){
                                 <img src={plus} alt="" />
                             </button>
                         </button>
-                        <button className="button-product-2 buttons">Add to car</button>
+                        <button className="button-product-2 buttons" onClick={()=>props.addCart(props.data.id,amountProduct)}>Add to car</button>
                 </div>
             </div>
         </div>

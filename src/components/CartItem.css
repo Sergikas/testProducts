@@ -1,0 +1,19 @@
+.cart-item-container{
+    display: flex;
+    padding: 4% 5% 2% 5%;
+    align-items: center;
+    gap: 2%;
+}
+
+.cart-item-container:hover{
+    background-color: rgb(235, 235, 235);
+}
+
+.cart-item-container > img{
+    height: 30px;
+    border-radius: 3px;
+}
+
+.cart-item-container > p{
+    margin: 0;
+}
