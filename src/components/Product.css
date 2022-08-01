@@ -83,6 +83,7 @@
 .button-product-2{
     width: 60%;
     background-color: #F28407;
+    box-shadow: rgba(223, 158, 60, 0.452) 0px 20px 40px -7px;
 }
 
 .button-product-2:hover{
@@ -115,6 +116,7 @@
     height: 330px;
     width: 350px;
     border-radius: 3%;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
 @media (max-width: 900px) {

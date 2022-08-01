@@ -19,22 +19,27 @@ export default function Header(props){
 
     return(
         <div className="header-container">
+
             <img className="icon" src={Logo} alt=""/>
+
             <div className="header-cart">
+
+                {props.itemsCart.length > 0 && <span className="icon-items">{props.itemsCart.length}</span>}
                 <img className="icon-cart" 
                     src={cart} 
                     onClick={()=>handdleCartItems(itemsVisibility)}
                     alt="" />
                 <div id="card-items" className="card-items">
+
                     <p>Cart</p>
 
-                    {props.itemsCart.length > 0 ? 
+                    {props.itemsCart.length > 0 ?  //the cart has items?
                     <div className="searchItems"> 
                         {props.itemsCart}
                         <button className="buttons buttonCart">Checkout</button>
                     </div>: 
-
                     <p className="card-empty">Your cart is empty.</p>}
+
                 </div>
             </div>
         </div>
