@@ -20,11 +20,12 @@ export default function Header(props){
     return(
         <div className="header-container">
 
-            <img className="icon" src={Logo} alt=""/>
+            <img className="icon" src={Logo} alt="" onClick={()=>props.setUserLocation("main")}/>
 
             <div className="header-cart">
 
-                {props.itemsCart.length > 0 && <span className="icon-items">{props.itemsCart.length}</span>}
+                {props.itemsCart.length > 0 && 
+                <span onClick={()=>handdleCartItems(itemsVisibility)} className="icon-items">{props.itemsCart.length}</span>}
                 <img className="icon-cart" 
                     src={cart} 
                     onClick={()=>handdleCartItems(itemsVisibility)}
@@ -33,11 +34,11 @@ export default function Header(props){
 
                     <p>Cart</p>
 
-                    {props.itemsCart.length > 0 ?  //the cart has items?
+                    {props.itemsCart.length > 0 ?  //the cart has items?, if true then
                     <div className="searchItems"> 
                         {props.itemsCart}
                         <button className="buttons buttonCart">Checkout</button>
-                    </div>: 
+                    </div>: //if the cart is empty
                     <p className="card-empty">Your cart is empty.</p>}
 
                 </div>

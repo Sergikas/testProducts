@@ -1,46 +1,53 @@
-import Product from "./Product.js";
+import Main from "./Main.js";
 import Header from "./Header.js";
-import CartItem from "./CartItem";
+import CartItem from "./CartItem.js";
 import "./App.css";
-import Data from "../Data.js";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 
 export default function App(){
 
-    /* const [dataProduct,setDataProduct] = useState([])
+    const [dataProduct,setDataProduct] = useState([])
 
+    //fecth data from the db
     useEffect(()=>{
         async function getData(){
-            console.log("fetching data")
-            const res = await fetch("https://api.jikan.moe/v4/anime")
+            const res = await fetch("http://localhost:8080/api/products")
             const data = await res.json()
-            setDataProduct(data.data)
+            setDataProduct(data)
         }
         getData()
-    },[]) */
+    },[]) 
 
-    const [itemsCart,setItemsCart] = useState([]); //cart items 
 
+    const [itemsCart,setItemsCart] = useState([]); //actual items in the cart list
+
+    //add items to the itemsCart
     function addCart(id,amountProduct){
         setItemsCart(prevItems =>{
             return[...prevItems,<CartItem 
-                    data={Data[id-1]}
+                    data={dataProduct[id-1]}
                     amountProduct={amountProduct}
                 />]
-        })
-        
+        })     
     }
+
+    //State record the actual position in the viwes of the page
+    const[userLocation,setUserLocation] = useState("main")
+
 
     return(
         <div className="app-container">
             <Header 
                 itemsCart={itemsCart}
+                setUserLocation={setUserLocation}
             />
-            <Product 
-                data={Data[0]} 
-                key={Data[0].id}
+            <Main
+                data={dataProduct}
+                userLocation={userLocation}
+                setUserLocation={setUserLocation}
                 addCart={addCart}
             />
+            
         </div>
     )
 }

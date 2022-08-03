@@ -1,0 +1,128 @@
+.productDetail-container{
+    height: fit-content;
+    width: 900px;
+    margin: 0 20%;
+    padding: 3% 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;  
+    gap: 9%;
+    z-index: 1;
+}
+
+.productDetail-buttons{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10%;;
+}
+
+.productDetail-name{
+    font-size: 40px;
+    font-weight: 600;
+    margin:0;
+    height: auto;
+}
+
+.productDetail-images{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.productDetail-description{
+    font-family: Inter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: rgb(17, 17, 17);
+    min-width: 500px;
+}
+
+.productDetail-detail{
+    color: rgb(49, 49, 48);
+    height: auto;
+}
+
+.buttons{
+    height: 40px;
+    font-family: Inter;
+    color: white;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 5px;
+}
+
+.button-productDetail-1{
+    width: 30%;  
+    position: relative;
+    color: rgb(17, 17, 17);
+    font-size: 1em;
+}
+
+.btn-controll{
+    position: absolute;
+    border-style: none;
+    border-radius: 5px;
+    top: 0;
+    width: 30px;
+}
+
+.btn-controll:hover{
+    opacity: .6;
+}
+
+.btn1{
+    left: 0;
+    height: 40px;
+}
+
+.btn2{
+    right: 0;
+    height: 40px;
+}
+
+.button-productDetail-2{
+    width: 60%;
+    background-color: #F28407;
+    box-shadow: rgba(223, 158, 60, 0.452) 0px 20px 40px -7px;
+}
+
+.button-productDetail-2:hover{
+    opacity: .7;
+}
+
+.company-label{
+    font-weight: 700;
+    color: #F28407;
+}
+
+.all-images{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-image{
+    width: 68px;
+    height: 68px;
+    border-radius: 5%;
+}
+
+.side-image:hover{
+    opacity: .6;
+    border: solid #F28407 1px;
+}
+
+.focus-image{
+    height: 330px;
+    width: 350px;
+    border-radius: 3%;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+
+@media (max-width: 900px) {
+    .productDetail-container {
+        width: auto;
+        margin: 0 2%;
+    }
+  }
